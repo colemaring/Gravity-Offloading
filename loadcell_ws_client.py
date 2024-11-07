@@ -5,7 +5,7 @@ import websockets
 from HX711 import *
 
 async def send_data():
-    uri = "ws://localhost:8080"
+    uri = "ws://localhost:3000"
     while True:
         try:
             async with websockets.connect(uri) as websocket:
