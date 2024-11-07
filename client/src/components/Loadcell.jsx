@@ -6,7 +6,7 @@ const Loadcell = () => {
   const [weight, setWeight] = useState("Loading...");
 
   useEffect(() => {
-    const ws = new WebSocket("ws://192.168.1.123:8080");
+    const ws = new WebSocket("ws://192.168.1.123:3000");
 
     ws.onopen = () => {
       console.log("Connected to WebSocket server");
