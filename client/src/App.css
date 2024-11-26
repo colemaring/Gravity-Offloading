@@ -1,11 +1,42 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+html, body{
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+  padding: 0.5rem;
+}
+.canvasContainer {
+  width: 100%;
+  max-width: 30rem;
+  aspect-ratio: 1 / 1;
+  margin: 0.5rem;
 }
 
-.holder {
-  text-align: center;
+.timestamp-column {
+  font-style: italic; /* Italic font style */
+  font-weight: bold; /* Bold font weight */
+}
+
+.loadcellContainer {
+  margin: 0.5rem;
+}
+
+.controllerContainer
+{
+  margin: 0.5rem;
+}
+
+.IMUContainer{
+  margin: 0.5rem;
+}
+
+canvas{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* Optional: Aligns items to the start of the container */
 }
 
