@@ -1,13 +1,17 @@
 html, body{
   font-family: 'Roboto', sans-serif;
   background-color: #f0f0f0;
-  padding: 0.5rem;
 }
 .canvasContainer {
-  width: 100%;
-  max-width: 30rem;
-  aspect-ratio: 1 / 1;
   margin: 0.5rem;
+  width: 90vh;
+  aspect-ratio: 1 / 1;
+  border: 3px solid rgb(110, 110, 110);
+  border-radius: 10px; 
+}
+
+.dropshadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add drop shadow */
 }
 
 .timestamp-column {
@@ -15,28 +19,147 @@ html, body{
   font-weight: bold; /* Bold font weight */
 }
 
+
+.status-container {
+  display: flex;
+  align-items: center;
+}
+
+.status-dot {
+  height: 6px;
+  width: 6px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.status-text {
+  color: red;
+}
+
 .loadcellContainer {
   margin: 0.5rem;
+  width: 15rem;
+}
+
+.leftandrightButtonsRemote{
+  width: 3.1rem;
+}
+
+.remoteText{
+  font-size: smaller;
+  padding-top: 0;
+  padding-left:0;
+  padding-right:0;
+}
+
+.centerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.commandContainer{
+  margin: 0.5rem;
+}
+
+.alertContainer{
+  margin-top: 1.8rem;
+}
+
+.remoteSpeedContainer {
+  background-color: black;
+  height: 7rem;
+  border-radius: 10px;
+  position: relative; /* Needed for absolute positioning of the circle */
+}
+
+.remoteWhiteBox{
+  margin-top: 0.5rem;
+  background-color: white;
+  height: 4.5rem;
+  border-radius: 10px;
+}
+
+.greenButtonContainer {
+  margin-top: 0.5rem;
+  height: 4.5rem;
+  position: relative; /* Needed for absolute positioning of the circle */
+}
+
+.instructions{
+  margin-top: 1rem;
+}
+
+.green-circle {
+  background-color: green;
+  border: 5px solid rgb(134, 134, 134);
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0.5rem; /* Adjust as needed */
+  transform: translateY(-50%); /* Center the circle vertically */
+}
+
+.white-circle {
+  background-color: rgb(0, 0, 0);
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the circle */
+  border: 6px solid rgb(255, 255, 255); /* Add border */
+}
+
+.remoteButtonContainer{
+  margin-top: 1.5rem;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.remoteContainer{
+  margin-top: 1rem;
+  max-width: 10rem;
+  height: 40rem;
+  width: 30rem;
+  background-color: #e8b668;
+  border-color: black;
+  border-width: 2px;
 }
 
 .controllerContainer
 {
   margin: 0.5rem;
+  height: 22rem;
+  width: 15rem;
 }
 
 .IMUContainer{
   margin: 0.5rem;
+  margin-top: 1rem;
+  width: 15rem;
 }
 
 canvas{
   width: 100%;
   height: 100%;
-  border-radius: 5px;
+  border-radius: 10px;
+  
 }
 
 .flex-container {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start; /* Optional: Aligns items to the start of the container */
+  margin-left: 10rem;
+  margin-right: 10rem;
 }
 

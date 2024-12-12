@@ -16,21 +16,34 @@ const Canvas = () => {
     context.fillStyle = "white";
     context.fillRect(0, 0, canvas.width, canvas.height);
 
+    // Draw grid
+    const gridSize = 20;
+    context.strokeStyle = "lightgrey";
+    context.lineWidth = 0.5;
+
+    for (let x = 0; x <= canvas.width; x += gridSize) {
+      context.beginPath();
+      context.moveTo(x, 0);
+      context.lineTo(x, canvas.height);
+      context.stroke();
+    }
+
+    for (let y = 0; y <= canvas.height; y += gridSize) {
+      context.beginPath();
+      context.moveTo(0, y);
+      context.lineTo(canvas.width, y);
+      context.stroke();
+    }
+
     // Draw red dot in the middle
     context.fillStyle = "red";
     context.beginPath();
     context.arc(canvas.width / 2, canvas.height / 2, 5, 0, Math.PI * 2);
     context.fill();
-
-    // Add text to the canvas
-    context.fillStyle = "black";
-    context.font = "2rem Arial";
-    context.textAlign = "center";
-    context.fillText("Crane Position", canvas.width / 2, 40);
   }, []);
 
   return (
-    <div className="canvasContainer">
+    <div className="canvasContainer dropshadow">
       <canvas ref={canvasRef} />
     </div>
   );

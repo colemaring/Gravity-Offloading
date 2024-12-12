@@ -52,7 +52,7 @@ const Controller = () => {
             </Col>
           </Row>
         </Container>
-        <Alert variant="info" className="mt-3  mb-1">
+        <Alert variant="info" className="alertContainer mb-1">
           <Card.Text className=" mb-1">Red: Stop All</Card.Text>
           <Card.Text className=" mb-1">Blue: Crane Control</Card.Text>
           <Card.Text className=" mb-1">Green: Hoist Control</Card.Text>
