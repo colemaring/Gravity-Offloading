@@ -6,7 +6,10 @@ import { Link } from "react-router-dom";
 
 function MyNavbar() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary no-margin-padding dropshadow">
+    <Navbar
+      expand="lg"
+      className="bg-body-tertiary no-margin-padding dropshadow"
+    >
       <Container>
         <Navbar.Brand>Gravity Offloading</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

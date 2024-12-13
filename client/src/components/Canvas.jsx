@@ -1,14 +1,14 @@
-import React, { useEffect, useRef } from "react";
-import "../App.css";
+import React, { useEffect, useRef, useContext } from "react";
+import { WebSocketContext } from "../context/WebSocketProvider";
 
 const Canvas = () => {
   const canvasRef = useRef(null);
+  const { yaw, pitch, roll, weight } = useContext(WebSocketContext);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
 
-    // Set canvas dimensions
     canvas.width = canvas.clientWidth;
     canvas.height = canvas.clientHeight;
 
@@ -45,6 +45,12 @@ const Canvas = () => {
   return (
     <div className="canvasContainer dropshadow">
       <canvas ref={canvasRef} />
+      <div className="sensor-data">
+        <p>Yaw: {yaw}</p>
+        <p>Pitch: {pitch}</p>
+        <p>Roll: {roll}</p>
+        <p>Weight: {weight}</p>
+      </div>
     </div>
   );
 };
