@@ -7,7 +7,7 @@ long rawValue;
 
 void setup() {
     Serial.begin(115200);
-    Wire.begin(18, 19);
+    Wire.begin(18, 19); // sda, scl
     scale.begin(17, 5); // data, clock
     delay(2000);
     mpu.setup(0x68);
