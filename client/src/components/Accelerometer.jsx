@@ -1,20 +1,20 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 
-const IMU = ({ pitch, yaw, roll }) => {
+const Accelerometer = ({ X, Y, Z }) => {
   return (
     <div className="IMUContainer">
       <Card>
         <Card.Body>
-          <Card.Title className="text-center">Euler Angles</Card.Title>
+          <Card.Title className="text-center">Accelerometer</Card.Title>
           <Card.Text>
-            <strong>Pitch:</strong> {pitch}°
+            <strong>X:</strong> {X}G
           </Card.Text>
           <Card.Text>
-            <strong>Yaw:</strong> {yaw}°
+            <strong>Y:</strong> {Y}G
           </Card.Text>
           <Card.Text>
-            <strong>Roll:</strong> {roll}°
+            <strong>X:</strong> {Z}G
           </Card.Text>
         </Card.Body>
       </Card>
@@ -22,4 +22,4 @@ const IMU = ({ pitch, yaw, roll }) => {
   );
 };
 
-export default IMU;
+export default Accelerometer;

@@ -1,13 +1,9 @@
-remove manual override controller
-add configuration page for manual control, things like speed, sensitivity, smoothing, thresholds
-Emergency stop to NavBar
-break sensor data into smaller components
-write documentation/instructions
+write documentation/instructions -> use docusaurus
 manual and automatic mode toggle on navbar
 
 NOW
 
-pass websockets context to other component that need the data
+pass websockets context to other components that need the data
 
 python script doesnt need to exist bc esp32 can send data over websockets wirelessly to
 ipv4 of pc:3000 and do the average calculation and such on-board
