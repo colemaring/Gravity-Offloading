@@ -17,7 +17,6 @@ export const WebSocketProvider = ({ children }) => {
     };
 
     ws.onmessage = (event) => {
-      console.log("Received message:", event.data);
       const [yaw, pitch, roll, weight] = event.data.split(",").map(parseFloat);
       setYaw(yaw);
       setPitch(pitch);
